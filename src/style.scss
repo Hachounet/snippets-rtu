@@ -1,7 +1,31 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  width: 100%;
+  height: 100%;
+}
+
+body {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+my-app {
+  width: 100%;
+}
+
+// CSS for dropdown menu
+
 .dropdown-menu {
   display: inline-block;
   position: relative;
   display: flex;
+  width: 100%;
 
   button {
     border: none;
@@ -55,5 +79,120 @@
 
   .visible {
     display: block;
+  }
+}
+
+// CSS for phone-menu
+
+.phone-menu {
+  display: inline-block;
+  position: relative;
+  display: flex;
+  flex-grow: 1;
+  background-color: #8bc6ec;
+  background-image: linear-gradient(135deg, #8bc6ec 0%, #9599e2 100%);
+  box-shadow:
+    rgba(50, 50, 93, 0.25) 0px 50px 100px -20px,
+    rgba(0, 0, 0, 0.3) 0px 30px 60px -20px,
+    rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+
+  height: 8dvh;
+
+  border-radius: 0px 0px 15px 15px;
+  width: 100dvw;
+
+  .contentmenu {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    h1 {
+      color: white;
+      font-size: 2rem;
+    }
+  }
+
+  button {
+    border: none;
+    border-radius: 0px;
+    padding: 0.5rem 30px;
+    font-size: 18px;
+    cursor: pointer;
+    position: absolute;
+    right: 0;
+    height: 100%;
+
+    background-color: transparent;
+
+    &:hover {
+      opacity: 100%;
+
+      svg {
+        fill: antiquewhite;
+      }
+    }
+
+    .clicked {
+      transform: rotate3d(15, 45, 45, 360deg);
+    }
+  }
+
+  .dropdown-options {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100dvw;
+    height: 92dvh;
+    overflow: auto;
+    z-index: 1;
+    background-color: #f8f8ff;
+    border-radius: 15px;
+    box-shadow: 0px 10px 10px 0px rgba(0, 0, 0, 0.4);
+
+    .dropdown-options-style {
+      height: 100%;
+      display: grid;
+      grid-auto-flow: row;
+      grid-template-rows: repeat(6, 1fr);
+      justify-content: center;
+      align-items: center;
+    }
+
+    a {
+      width: 100dvw;
+      height: 100%;
+      display: block;
+      color: black;
+
+      background-color: #f8f8ff;
+
+      padding: 5px;
+      text-decoration: none;
+      padding: 10px 30px;
+
+      font-size: 3rem;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      letter-spacing: 4px;
+      text-shadow:
+        0px 4px 3px rgba(0, 0, 0, 0.4),
+        0px 8px 13px rgba(0, 0, 0, 0.1),
+        0px 18px 23px rgba(0, 0, 0, 0.1);
+      &:hover {
+        background-color: #20202211;
+        color: #9093e2;
+        font-weight: 900;
+        transition: ease-in-out 0.3s;
+        text-shadow: 3px 2px 3px rgba(81, 67, 21, 0.8);
+      }
+    }
+
+    &.visible {
+      display: block;
+    }
   }
 }
