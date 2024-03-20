@@ -15,10 +15,6 @@ body {
   overflow: hidden;
 }
 
-my-app {
-  width: 100%;
-}
-
 // CSS for dropdown menu
 
 .dropdown-menu {
@@ -129,12 +125,18 @@ my-app {
       opacity: 100%;
 
       svg {
-        fill: antiquewhite;
+        fill: rgb(230, 212, 212);
       }
     }
 
-    .clicked {
+    .clicked-on {
       transform: rotate3d(15, 45, 45, 360deg);
+      transition: transform 1s;
+    }
+
+    .clicked-off {
+      transform: rotate3d(-15, -45, -45, 360deg);
+      transition: transform 1s;
     }
   }
 

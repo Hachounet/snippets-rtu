@@ -23,6 +23,7 @@ import './style.scss';
   });
 } */
 
+/*
 function implementPhoneDropDownMenu() {
   const MenuPhoneBtn = document.getElementById('menu-btn-phone');
 
@@ -30,6 +31,14 @@ function implementPhoneDropDownMenu() {
   const toggleDropDown = function () {
     const menuOptions = document.querySelector('.dropdown-options');
     menuOptions.classList.toggle('visible');
+    const firstChild = MenuPhoneBtn.children[0];
+    if (firstChild.classList.contains('clicked-on')) {
+      firstChild.classList.remove('clicked-on');
+      firstChild.classList.add('clicked-off');
+    } else {
+      firstChild.classList.remove('clicked-off');
+      firstChild.classList.add('clicked-on');
+    }
   };
   MenuPhoneBtn.addEventListener('click', (e) => {
     e.stopPropagation();
@@ -43,5 +52,4 @@ function implementPhoneDropDownMenu() {
     }
   });
 }
-
-implementPhoneDropDownMenu();
+*/
