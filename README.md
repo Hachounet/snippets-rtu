@@ -10,8 +10,8 @@ Prettier-ESLint-Config
 Webpack
 Webpack Dev Serv
 
-Need to be installed or setup :
+Webpack Setup :
 
-Asset management for Webpack
+Asset management (SCSS, imgs, SVG, fonts )
 
 Code-Actions ( plugin VSCode )
